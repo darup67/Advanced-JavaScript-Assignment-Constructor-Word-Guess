@@ -14,6 +14,7 @@ This is a Word Guess command-line game using constructor functions.
 *npm install
 
 [Inquirer](https://www.npmjs.com/package/inquirer#installation)
+
 [Prompt](https://www.npmjs.com/package/prompt)
 
 
