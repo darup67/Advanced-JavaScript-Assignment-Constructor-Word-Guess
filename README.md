@@ -3,17 +3,17 @@ Advanced JavaScript Assignment: Constructor Word Guess
 #Overview
 This is a Word Guess command-line game using constructor functions.
 
-INSTALLATION
+#INSTALLATION
 
-Clone repo to your local machine
+*Clone repo to your local machine
 
-Run "npm install".
-
-
-npm install
-
-Inquirer
-Prompt
+*Run "npm install".
 
 
-Star Wars Movies - Word Guess
+*npm install
+
+[Inquirer](https://www.npmjs.com/package/inquirer#installation)
+[Prompt](https://www.npmjs.com/package/prompt)
+
+
+Star Wars Movies - Word Guess Game
