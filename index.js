@@ -75,7 +75,7 @@ function knowledge() {
             }
         })
     } else {
-        console.log(`YOU WIN\n Congrats, the force is with you!`);
+        console.log(`YOU WIN\n Congrats, the force is with you indeed!`);
         restartGame();
     }
 
