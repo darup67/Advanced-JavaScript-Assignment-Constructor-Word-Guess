@@ -1,33 +1,28 @@
 var inquirer = require('inquirer');
 var prompt = require('prompt');
-
 var word = require('./word.js');
 
 
+var starwarsMovies = ['A New Hope', 'The Empire Strikes Back', 'Return of the Jedi',
+    'The Phantom Menace', 'Attack of the Clones', 'Revenge of the Sith', 'The Force Awakens',
 
-var tarantinoMovies = ['Reservior Dogs', 'Pulp Fiction', 'Jackie Brown',
-    'Kill Bill Vol. 1', 'Kill Bill Vol. 2', 'Death Proof', 'Inglorious Basterds',
-    'Django Unchained', 'The Hateful Eight', 'Once Upon a Time in Hollywood'
 ];
 
-// INDEX FROM TARANTINO MOVIES ARRAY
-var randomIndex = Math.floor(Math.random() * tarantinoMovies.length);
-var randomMovie = tarantinoMovies[randomIndex];
+var randomIndex = Math.floor(Math.random() * starwarsMovies.length);
+var randomMovie = starwarsMovies[randomIndex];
 
-// PASSING TARANTINO WORD THROUGH CONSTRUCTOR
-computerMovie = new Word(randomMovie);
+
+randomMovie = new Word(randomMovie);
 
 var requireNewWord = false;
-
 var incorrectLetters = [];
 var correctLetters = [];
-
-var guessesLeft = 10;
+var guessesLeft = 7;
 
 function knowledge() {
     if (requireNewWord) {
-        var randomIndex = Math.floor(Math.random() * tarantinoMovies.length);
-        var randomMovie = tarantinoMovies[randomIndex];
+        var randomIndex = Math.floor(Math.random() * starwarsMovies.length);
+        var randomMovie = starwarsMovies[randomIndex];
 
         computerMovie = new Word(randomMovie);
         requireNewWord = false;
@@ -46,7 +41,7 @@ function knowledge() {
                 knowledge();
             } else {
                 if (incorrectLetters.includes(input.userinput) || correctLetters.includes(input.userinput) || input.userinput === '') {
-                    console.log(`\n You already guessed that letter or Nothing Entered\n`);
+                    console.log(`\n You already guessed that letter or blank\n`);
                     knowledge();
                 } else {
                     var wordCheckArray = [];
@@ -68,7 +63,7 @@ function knowledge() {
                     if (guessesLeft > 0) {
                         knowledge();
                     } else {
-                        console.log(`Sorry, you lost!\n`);
+                        console.log(`Sorry, you have lost!\n`);
 
                         restartGame();
                     }
@@ -80,7 +75,7 @@ function knowledge() {
             }
         })
     } else {
-        console.log(`YOU WIN\n You know your Quentin Tarantino movies!`);
+        console.log(`YOU WIN\n Congrats, the force is with you!`);
         restartGame();
     }
 
