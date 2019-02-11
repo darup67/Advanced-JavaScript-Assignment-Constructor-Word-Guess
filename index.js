@@ -96,7 +96,7 @@ function restartGame() {
                 requireNewWord = true;
                 incorrectLetters = [];
                 correctLetters = [];
-                guessesLeft = 10;
+                guessesLeft = 7;
                 knowledge();
             } else {
                 return
